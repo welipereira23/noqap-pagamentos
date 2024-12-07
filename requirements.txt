@@ -1,1 +1,2 @@
 # Nenhuma dependência necessária
+stripe==7.10.0
