@@ -1,2 +1,3 @@
 # Nenhuma dependência necessária
 stripe==7.10.0
+supabase==1.2.0

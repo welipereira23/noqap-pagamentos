@@ -1,0 +1,26 @@
+/* Estilos personalizados */
+input {
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#dashboard, #loginForm {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+}
