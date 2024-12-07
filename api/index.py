@@ -67,18 +67,7 @@ def create_checkout_session():
         logger.error(f'Erro ao criar sessão: {str(e)}')
         return jsonify({'error': str(e)}), 400
 
-def handler(request):
-    """Handle a request to the Flask app."""
-    logger.info(f'Recebendo requisição: {request.method} {request.path}')
-    
-    with app.request_context(request):
-        try:
-            response = app.full_dispatch_request()
-            logger.info('Requisição processada com sucesso')
-            return response
-        except Exception as e:
-            logger.error(f'Erro ao processar requisição: {str(e)}')
-            return jsonify({'error': str(e)}), 500
-
-if __name__ == '__main__':
-    app.run()
+# Handler para Vercel
+def handler(event, context):
+    logger.info(f'Recebendo requisição: {event.get("method")} {event.get("path")}')
+    return app
